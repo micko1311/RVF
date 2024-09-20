@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css
+    ">
+    <title>Micko</title>
+</head>
+<body>
+
+
+    <button class="btn-main" onclick="popup(popupbarangay)"><i class="las la-map-pin addicon"></i> <span>Add Barangay</span></button>
+
+<!-- Add Barangay -->
+<div id="popupbarangay" class="popup">
+    <div class="p-c-barangay">
+        <span class="closebarangay" onclick="closepopup(popupbarangay)">&times;</span>
+        <h3>Add New Barangay</h3>
+
+        <form action="scripts/add-barangay.php" method="POST">
+            <label class="lbl" for="barangay_name">Barangay Name</label>
+            <input class="inp" type="text" id="barangay_name" name="barangay_name" required>
+
+            <button class="addbarangay" type="submit">Add Barangay</button>
+        </form>
+    </div>
+</div>
+
+<script>
+    function popup(id) {
+    id.style.display = 'block';
+}
+
+function closepopup(id) {
+    id.style.display = 'none';
+}
+</script>
+
+
+
+</body>
+</html>
